@@ -2,28 +2,49 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>iview example</title>
-    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
-    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
-    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+    <title>你可真丑</title>
 </head>
 <body>
-<div id="app">
-    <i-button @click="show">Click me!</i-button>
-    <Modal v-model="visible" title="Welcome">Welcome to iView</Modal>
+<div>
+<table>
+ <tr>
+     <td>昵称：</td>
+     <td><input type="text" autofocus="autofocus"  pattern="[A-z]{6}" placeholder="好好想一个吧" ></td>
+</tr>    
+ <tr>
+     <td>邮箱：</td>
+     <td><input type="email" placeholder="俺加了验证，最好输对" ></td>
+</tr> 
+ <tr>
+     <td>密码：</td>
+     <td><input type="password"  pattern="\w{6,8}" placeholder="小心点，忘记俺可不管" ></td>
+</tr>  
+ <tr>
+     <td>头像：</td>
+     <td><input type="file"  placeholder="头像越丑越好"></td>
+</tr> 
+<tr>
+    <td>地区：</td>
+    <td>
+        <input type="url" list="url_list"  placeholder="一点用没有"/>
+        <datalist id="url_list">
+        <option label="山西" value="1" />
+        <option label="北京" value="2" />
+        <option label="上海" value="3" />
+        </datalist>
+    </td>
+</tr>
+<tr>
+    <td>描述：</td>
+    <td>
+        <textarea>
+        越懒越好
+        </textarea>
+    </td>
+ </tr>    
+    
+</table>
+    
 </div>
-<script>
-    new Vue({
-        el: '#app',
-        data: {
-            visible: false
-        },
-        methods: {
-            show: function () {
-                this.visible = true;
-            }
-        }
-    })
-  </script>
 </body>
 </html>
