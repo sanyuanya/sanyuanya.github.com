@@ -1,5 +1,22 @@
-<! DOCTYPE html>
-
-<html>
-<span style="color:red">韩杰的网站</span>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="iview.min.js"></script>
+  </head>
+  <body>
+    <template>
+    <Slider v-model="value" range />
+</template>
+  </body>
+  <script>
+    export default {
+        data () {
+            return {
+                value: [20, 50]
+            }
+        }
+    }
+</script>
 </html>
